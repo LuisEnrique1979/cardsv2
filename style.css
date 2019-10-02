@@ -19,11 +19,26 @@ body > div {
     float: left;
 }
 
+body > div:hover{
+    background: rgb(90, 88, 88);
+}
+
+body > div:nth-child(2){
+    background: red;
+}
+
 div > img {
     width: 100%;
     border-radius: 10px;
 }
 
+body > div > h1 {
+    position: absolute;
+}
+
+body > div > p {
+    position: absolute;
+}
 /*div > h1 {
     color: red;
 }*/
