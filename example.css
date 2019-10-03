@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: red;
+    margin: 20px;
+}
+
+
+div:first-child {
+    background: greenyellow;
+}
+
+div:last-child {
+    background: whitesmoke;
+}*/
+
+/*
+div:last-of-type{
+    background: gray;
+}
+
+div:hover {
+    background: yellow;
+}
+
+div:nth-child(3n){
+    background: blueviolet;
+}
+
+a:link {
+    display: block;
+    background: black;
+    color: aquamarine;
+}
+
+a:active {
+    background: yellow;
+    color: black;
+}
+
+a:visited {
+    color: red;
+    background: blue;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background: red;
+
+}
+
+button:active {
+    width: 100px;
+}
+
+div::before {
+    content: "";
+    display: block;
+    background: white;
+    width: 20px;
+    height: 20px;
+}
+
+div::after {
+    content: "";
+    display: block;
+    background: yellow;
+    width: 30px;
+    height: 30px;
+}
+
+
+div:hover::before {
+    content:"algo";
+}
+
+div::after {
+    background: grey;
+    content: attr(acceso);
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: inherit;
+    bottom: 20px;
+}*/
+
+.checkbox {
+    width: 200px;
+    height: 100px;
+    background: grey;
+    border-radius: 50px;   
+}
+
+.checkbox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    background: #000;
+    border-radius: 50px;
+    transition: .5s all;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    opacity: 0;
+    z-index: 99;
+}
+
+input[type="checkbox"]:checked + .checkbox::before {
+    transform: translateX(100px);
+}
+
+.giro {
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 0);
+    animation: 4s animacion linear;
+    margin: 20px;
+   /* transition: .5s transform ease-out; */
+}
+
+ /*.giro:hover {
+     transform: rotateZ(45deg);
+ }*/
+
+ @keyframes animacion {
+     /*from {
+         background: white;
+
+     }
+     to {
+         background: black;
+     }*/
+
+     0% {
+         background: blue;
+     }
+     20% {
+         background: orchid;
+         transform: translateZ(400px);
+     }
+
+     50% {
+         background: yellow;
+         transform: translateX(800px);
+         width: 50px;
+         height: 50px;
+     }
+
+     70% {
+         background: red;
+         transform: translateY(100px);
+     }
+
+     100% {
+         background: green;
+         transform: translateX(0px);
+         width: 100px;
+         height: 100px;
+     }
+ }
